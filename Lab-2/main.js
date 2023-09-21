@@ -1,9 +1,3 @@
-// Function will be called here
-
-
-
-// Import the function
-
 const getDayOfTheWeek = require("./lab-two").getDayOfTheWeek;
 const specialOffset = require("./lab-two").specialOffset;
 const isLeapYear = require("./lab-two").isLeapYear;

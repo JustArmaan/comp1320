@@ -87,32 +87,27 @@ function isLeapYear(year) {
 // Function that prints date and day of the week of 2023
 function makeCalendar(year) {
   const numberOfDays = {
-    "January": 31,
-    "February": 28,
-    "March": 31,
-    "April": 30,
-    "May": 31,
-    "June": 30,
-    "July": 31,
-    "August": 31,
-    "September": 30,
-    "October": 31,
-    "November": 30,
-    "December": 31,
-  }
+    January: 31,
+    February: 28,
+    March: 31,
+    April: 30,
+    May: 31,
+    June: 30,
+    July: 31,
+    August: 31,
+    September: 30,
+    October: 31,
+    November: 30,
+    December: 31,
+  };
   // To get month names in array form, from numberOfDays
   const months = Object.keys(numberOfDays);
   for (let i = 0; i < 12; i++) {
     for (let j = 1; j <= numberOfDays[months[i]]; j++) {
-        getDayOfTheWeek(year, months[i], j);
-        
+      getDayOfTheWeek(year, months[i], j);
     }
   }
 }
-
-// getDayOfTheWeek(1619, "January", 1);
-// getDayOfTheWeek(1704, "February", 1);
-// getDayOfTheWeek(2004, "August", 16);
 
 // Export the function
 module.exports = { getDayOfTheWeek, specialOffset, isLeapYear, makeCalendar };
