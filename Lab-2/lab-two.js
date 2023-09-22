@@ -63,6 +63,7 @@ function getDayOfTheWeek(year, month, day) {
   );
 }
 
+// Determining leapyear and codes for years starting with(16, 17, 18, 20, 21)
 function specialOffset(month, year) {
   let offset = 0;
   let divideBy100 = Math.floor(year / 100);
@@ -102,12 +103,15 @@ function makeCalendar(year) {
   };
   // To get month names in array form, from numberOfDays
   const months = Object.keys(numberOfDays);
+  // Loops through Month and days of each month 
   for (let i = 0; i < 12; i++) {
     for (let j = 1; j <= numberOfDays[months[i]]; j++) {
       getDayOfTheWeek(year, months[i], j);
     }
   }
 }
-
+// Calling function to get day of week for all of 2023
+makeCalendar(2023);
 // Export the function
 module.exports = { getDayOfTheWeek, specialOffset, isLeapYear, makeCalendar };
+
